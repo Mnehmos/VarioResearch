@@ -1,0 +1,88 @@
+/* CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Root Variables */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --dark-color: #343a40;
+    --light-color: #f8f9fa;
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+    --font-family: Arial, sans-serif;
+}
+
+/* Layout Utilities */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: var(--spacing-medium);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Section Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: var(--spacing-medium);
+    text-align: center;
+}
+
+#hero {
+    padding: var(--spacing-large);
+    text-align: center;
+}
+
+#comparison {
+    padding: var(--spacing-medium);
+    background-color: var(--light-color);
+}
+
+#features {
+    padding: var(--spacing-medium);
+}
+
+#testimonials {
+    padding: var(--spacing-medium);
+    background-color: var(--light-color);
+}
+
+#cta {
+    padding: var(--spacing-large);
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+#contact {
+    padding: var(--spacing-large);
+}
+
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: var(--spacing-medium);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .flex {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

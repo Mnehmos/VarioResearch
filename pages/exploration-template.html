@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCM Exploration Template - Operation Foresight</title>
+  <meta name="description" content="Standardized template for Strategic Curiosity Mode explorations, providing structure for documenting triggers, questions, methodology, findings, and integration recommendations.">
+  <meta name="keywords" content="strategic curiosity mode, SCM template, exploration documentation, research methodology, operation foresight">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/showcase-report.css">
+  <script src="../script.js" defer></script>
+  
+  <!-- JSON-LD structured data for research metadata -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Operation Foresight - SCM Exploration Template",
+    "alternativeHeadline": "Standardized Template for Strategic Curiosity Mode Explorations",
+    "datePublished": "2025-04-23",
+    "description": "A standardized template for documenting Strategic Curiosity Mode explorations within the Operation Foresight project, ensuring consistent structure and thoroughness.",
+    "author": {
+      "@type": "Organization",
+      "name": "VarioResearch",
+      "url": "https://varioResearch.example.com"
+    },
+    "keywords": "SCM template, exploration template, research methodology, anomaly investigation",
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Documentation Standard",
+        "description": "Standardized format for documenting exploratory research"
+      },
+      {
+        "@type": "Thing",
+        "name": "Strategic Curiosity Mode",
+        "description": "A research methodology for investigating anomalies and edge cases"
+      }
+    ],
+    "isPartOf": {
+      "@type": "ResearchProject",
+      "name": "Operation Foresight"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "name": "SCM Exploration Template - Operation Foresight"
+    }
+  }
+  </script>
+  
+  <style>
+    /* Additional styles for this document */
+    .template-container {
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 2rem 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    
+    .template-header {
+      background-color: #f1f8ff;
+      padding: 1rem;
+      border-bottom: 1px solid #dee2e6;
+    }
+    
+    .template-header h3 {
+      margin: 0;
+      color: #343a40;
+      display: flex;
+      align-items: center;
+      font-size: 1.3rem;
+    }
+    
+    .template-header h3 .icon {
+      margin-right: 0.75rem;
+      font-size: 1.1em;
+    }
+    
+    .template-content {
+      padding: 1.5rem;
+      background-color: #fff;
+    }
+    
+    .filename {
+      font-family: monospace;
+      background-color: #f8f9fa;
+      padding: 0.5rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      border-left: 4px solid #007bff;
+    }
+    
+    .frontmatter {
+      background-color: #f8f9fa;
+      padding: 1rem;
+      border: 1px solid #dee2e6;
+      border-radius: 4px;
+      font-family: monospace;
+      margin-bottom: 1.5rem;
+      white-space: pre-wrap;
+    }
+    
+    .section-template {
+      margin-bottom: 2rem;
+    }
+    
+    .section-template h4 {
+      color: #343a40;
+      border-bottom: 1px solid #dee2e6;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .section-description {
+      background-color: #f8f9fa;
+      padding: 1rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    
+    .example-text {
+      color: #6c757d;
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+    
+    .guideline-list li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .guideline-list strong {
+      color: #343a40;
+    }
+    
+    .field-description {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .field-name {
+      font-weight: 600;
+      color: #495057;
+      font-family: monospace;
+    }
+    
+    .field-format {
+      color: #6c757d;
+      font-style: italic;
+      font-family: monospace;
+      margin-top: 0.25rem;
+    }
+    
+    .copy-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-top: 1rem;
+    }
+    
+    .copy-button:hover {
+      background-color: #0069d9;
+    }
+    
+    .template-meta {
+      background-color: #f2f9f1;
+      padding: 1rem;
+      border-radius: 4px;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      border-left: 4px solid #28a745;
+    }
+    
+    .full-template {
+      background-color: #f8f9fa;
+      padding: 1.5rem;
+      border: 1px solid #dee2e6;
+      border-radius: 4px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      line-height: 1.5;
+      margin: 2rem 0;
+      color: #212529;
+      font-size: 0.9rem;
+    }
+    
+    @media (max-width: 768px) {
+      .field-description {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">Vario<span>Research</span></div>
+      <h1>Operation Foresight</h1>
+      <p class="subtitle">Strategic Curiosity Mode</p>
+      <nav>
+        <ul>
+          <li><a href="table-of-contents.html">Contents</a></li>
+          <li><a href="executive-summary.html">Executive Summary</a></li>
+          <li><a href="methodology.html">Methodology</a></li>
+          <li><a href="key-findings.html">Key Findings</a></li>
+          <li><a href="strategic-recommendations.html">Recommendations</a></li>
+          <li><a href="sources.html">Sources</a></li>
+          <li><a href="../index.html" class="btn">Back to Main Site</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <div class="floating-nav">
+      <div class="floating-nav-header">On This Page</div>
+      <ul>
+        <li><a href="#overview" class="floating-nav-link">Overview</a></li>
+        <li><a href="#frontmatter" class="floating-nav-link">Frontmatter</a></li>
+        <li><a href="#trigger-context" class="floating-nav-link">Trigger Context</a></li>
+        <li><a href="#exploration-questions" class="floating-nav-link">Exploration Questions</a></li>
+        <li><a href="#methodology" class="floating-nav-link">Methodology</a></li>
+        <li><a href="#findings" class="floating-nav-link">Findings</a></li>
+        <li><a href="#integration" class="floating-nav-link">Integration</a></li>
+        <li><a href="#full-template" class="floating-nav-link">Full Template</a></li>
+        <li><a href="#best-practices" class="floating-nav-link">Best Practices</a></li>
+      </ul>
+    </div>
+    
+    <section>
+      <div class="summary-container">
+        <div class="spotlight-banner">
+          <span class="spotlight-icon">🧪</span>
+          <span class="spotlight-text">Research Template</span>
+        </div>
+        
+        <h2 id="overview">SCM Exploration Template</h2>
+        <p class="date">Date: 2025-04-23</p>
+        
+        <div class="highlight-box">
+          <h3 class="section-identifier">Purpose</h3>
+          <p class="highlight-text">This document provides the standardized template for all Strategic Curiosity Mode (SCM) explorations in Operation Foresight. Using this consistent format ensures thorough documentation of triggers, methodology, and findings while facilitating seamless integration into the main research flow.</p>
+          <p><strong>Template Task ID:</strong> scm_template_001 | <strong>Status:</strong> Active</p>
+        </div>
+        
+        <p>Strategic Curiosity Mode serves as a cognitive safety mechanism that enables exploration of edge cases, anomalies, and unexpected patterns that might otherwise be overlooked in linear research. Each SCM exploration should be documented according to this template and stored in the <code>projects/operation_foresight/scm/explorations/</code> directory.</p>
+        
+        <div class="template-container">
+          <div class="template-header">
+            <h3><span class="icon">📄</span> SCM Exploration Document Structure</h3>
+          </div>
+          <div class="template-content">
+            <div class="filename">
+              File Name Format: <strong>scm_exploration_{trigger_id}.md</strong><br>
+              Example: <code>scm_exploration_anomaly_001.md</code>
+            </div>
+            
+            <h3 id="frontmatter">1. Frontmatter</h3>
+            <div class="section-description">
+              <p>Each exploration document begins with YAML frontmatter that includes essential metadata about the trigger and exploration status. This enables efficient tracking, categorization, and retrieval of explorations.</p>
+            </div>
+            
+            <div class="frontmatter">
+---
+trigger_id: scm_trigger_[id]
+trigger_type: [anomaly|gap|combinatorial|emergence|meta]
+activation_date: YYYY-MM-DD
+research_phase: [0-5]
+status: [active|completed|integrated|archived]
+---</div>
+            
+            <div class="field-description">
+              <div class="field-name">trigger_id</div>
+              <div>Unique identifier for this SCM trigger event.<br><span class="field-format">Format: scm_trigger_[category-abbreviation]_[sequential-number]<br>Example: scm_trigger_an_001</span></div>
+            </div>
+            
+            <div class="field-description">
+              <div class="field-name">trigger_type</div>
+              <div>Category of trigger that activated this SCM exploration.<br><span class="field-format">One of: anomaly, gap, combinatorial, emergence, meta</span></div>
+            </div>
+            
+            <div class="field-description">
+              <div class="field-name">activation_date</div>
+              <div>Date when the SCM exploration was initiated.<br><span class="field-format">ISO date format: YYYY-MM-DD</span></div>
+            </div>
+            
+            <div class="field-description">
+              <div class="field-name">research_phase</div>
+              <div>The research phase during which the trigger occurred.<br><span class="field-format">Number 0-5 corresponding to research phases</span></div>
+            </div>
+            
+            <div class="field-description">
+              <div class="field-name">status</div>
+              <div>Current status of the exploration.<br><span class="field-format">One of: active, completed, integrated, archived</span></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="template-container">
+          <div class="template-header">
+            <h3><span class="icon">📝</span> Content Sections</h3>
+          </div>
+          <div class="template-content">
+            <div class="section-template" id="trigger-context">
+              <h4>2. Trigger Context</h4>
+              <div class="section-description">
+                <p>Provide a clear, concise description of what triggered the SCM activation. This should include specific observations, data points, or patterns that met the activation threshold for one of the trigger categories.</p>
+              </div>
+              <div class="example-text">
+                <p><strong>Example:</strong> "During analysis of recent AI security incidents reported in Q1 2025, we observed that 23% of successful attacks utilized techniques that don't fit within any of the current attack typologies in our threat framework. This exceeds the 20% threshold for meta-analysis triggers and suggests a potential blindspot in our analytical framework."</p>
+              </div>
+            </div>
+            
+            <div class="section-template" id="exploration-questions">
+              <h4>3. Exploration Questions</h4>
+              <div class="section-description">
+                <p>List the specific questions that this SCM exploration aims to investigate. These questions should be focused, concrete, and designed to explore the implications, causes, or characteristics of the triggering observation.</p>
+              </div>
+              <div class="example-text">
+                <p><strong>Example:</strong></p>
+                <ul>
+                  <li>What common characteristics exist among the attacks that don't fit current typologies?</li>
+                  <li>Are these novel attacks driven by technical innovation or by new combinations of existing techniques?</li>
+                  <li>What modifications to our threat framework would be required to categorize these attacks?</li>
+                  <li>Does this pattern suggest the emergence of a fundamentally new threat vector?</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="section-template" id="methodology">
+              <h4>4. Methodology</h4>
+              <div class="section-description">
+                <p>Detail the cognitive process sequence and specific investigative approaches used for this exploration. Reference specific logic primitives and process combinations from the cognitive process library.</p>
+              </div>
+              <div class="example-text">
+                <p><strong>Example:</strong> "This exploration utilized the 'Pattern Recognition' cognitive process (Observe → Infer), followed by 'Comparative Analysis' (Observe → Define → Reflect → Infer → Synthesize). We first analyzed the 23 anomalous attacks to identify common features, then compared them with our existing threat taxonomy to identify specific gaps and potential modifications."</p>
+              </div>
+            </div>
+            
+            <div class="section-template" id="findings">
+              <h4>5. Findings</h4>
+              <div class="section-description">
+                <p>Present the results of the exploration, explicitly categorizing findings based on the confidence level and evidence strength. Always maintain clear separation between different confidence levels.</p>
+              </div>
+              <div class="example-text">
+                <p><strong>Example:</strong></p>
+                <p><strong>Confirmed Findings:</strong></p>
+                <ul>
+                  <li>18 of the 23 anomalous attacks (78%) utilized techniques that combine elements from multiple existing attack categories</li>
+                  <li>Current threat taxonomy lacks a formal way to represent hybrid or composite attack patterns</li>
+                </ul>
+                <p><strong>Plausible Findings:</strong></p>
+                <ul>
+                  <li>The increase in hybrid attacks may be driven by the proliferation of automated attack generation tools</li>
+                  <li>Taxonomic constraints are limiting threat detection capabilities in existing security systems</li>
+                </ul>
+                <p><strong>Speculative Findings:</strong></p>
+                <ul>
+                  <li>Future attacks may involve increasingly complex combinations, potentially evolving toward "attack swarms" with multiple simultaneous hybrid vectors</li>
+                  <li>AI-based threat classification may require graph-based rather than hierarchical taxonomies</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="section-template" id="integration">
+              <h4>6. Integration Recommendation</h4>
+              <div class="section-description">
+                <p>Provide specific recommendations for how the findings should be integrated into the main research flow. Reference specific documents, sections, or frameworks that should be updated.</p>
+              </div>
+              <div class="example-text">
+                <p><strong>Example:</strong></p>
+                <p>"We recommend the following integration approach:</p>
+                <ol>
+                  <li><strong>Direct Incorporation:</strong> Update the Threat Vector Profiles document to include a new section on "Hybrid Attack Patterns" that incorporates the confirmed findings</li>
+                  <li><strong>Framework Modification:</strong> Modify the threat taxonomy in the Framework document to add support for composite attack vectors and cross-category combinations</li>
+                  <li><strong>Appendix Inclusion:</strong> Add the speculative findings about potential evolution toward attack swarms in the Appendix of the Second-Order Effects document, clearly marked as speculative but worthy of monitoring</li>
+                </ol>
+                <p>This integration should be completed before Phase 3 to ensure all subsequent analysis incorporates the updated taxonomy."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <h3 id="full-template">Full Template for Copy/Paste</h3>
+        <div class="full-template">
+---
+trigger_id: scm_trigger_[id]
+trigger_type: [anomaly|gap|combinatorial|emergence|meta]
+activation_date: YYYY-MM-DD
+research_phase: [0-5]
+status: [active|completed|integrated|archived]
+---
+
+## Trigger Context
+Brief description of what triggered SCM activation
+
+## Exploration Questions
+Specific questions being investigated
+
+## Methodology
+Logic primitives and process combinations used
+
+## Findings
+Results categorized as confirmed/plausible/speculative
+
+### Confirmed Findings
+- Finding 1
+- Finding 2
+
+### Plausible Findings
+- Finding 1
+- Finding 2
+
+### Speculative Findings
+- Finding 1
+- Finding 2
+
+## Integration Recommendation
+How findings should be integrated into main research
+        </div>
+        <button class="copy-button" onclick="copyTemplate()">Copy Template to Clipboard</button>
+        
+        <h3 id="best-practices">Best Practices for SCM Exploration Documentation</h3>
+        
+        <ul class="guideline-list">
+          <li><strong>Precision in Trigger Description:</strong> Be specific about what triggered the SCM activation, including exact measurements, thresholds, and context. Vague descriptions make it difficult to evaluate the validity of the exploration.</li>
+          
+          <li><strong>Clear Confidence Labeling:</strong> Maintain rigorous separation between confirmed, plausible, and speculative findings. This is essential for responsible integration into the main research.</li>
+          
+          <li><strong>Methodological Transparency:</strong> Explicitly reference the cognitive processes and methodological approaches used. This allows others to understand how conclusions were reached.</li>
+          
+          <li><strong>Exploration Scope Control:</strong> Keep SCM explorations focused on the specific trigger. Avoid scope creep that could dilute the investigation or consume excessive resources.</li>
+          
+          <li><strong>Integration Specificity:</strong> Provide concrete, actionable integration recommendations that specify exactly which documents should be updated and how.</li>
+          
+          <li><strong>Traceability:</strong> Ensure that all SCM explorations are properly logged in the trigger log and that integration decisions are documented in the integration decisions registry.</li>
+          
+          <li><strong>Time Bounding:</strong> SCM explorations should be time-bounded (default: 20% of phase resources) to prevent infinite exploration loops. Document time usage in the methodology section.</li>
+        </ul>
+        
+        <div class="template-meta">
+          <p><strong>Note:</strong> This template is a living document that may be updated as the research process evolves. Any modifications to the template should be documented in the revision history and communicated to all researchers.</p>
+          
+          <p><strong>Related Documents:</strong></p>
+          <ul>
+            <li><a href="scm-triggers.html">SCM Triggers</a> - Criteria for activating Strategic Curiosity Mode</li>
+            <li><a href="trigger-log.html">Trigger Log</a> - Registry of all SCM activations</li>
+            <li><a href="integration-decisions.html">Integration Decisions</a> - Documentation of how findings were incorporated</li>
+          </ul>
+        </div>
+        
+        <div class="cta-container">
+          <a href="integration-decisions.html" class="btn">Previous: Integration Decisions</a>
+          <a href="regulatory-approach-comparison.html" class="btn-alt">Next: Regulatory Approach Comparison</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Vario Research</h4>
+          <p>Advanced AI research solutions with unmatched speed and precision.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Report Sections</h4>
+          <ul>
+            <li><a href="table-of-contents.html">Table of Contents</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="key-findings.html">Key Findings</a></li>
+            <li><a href="strategic-recommendations.html">Strategic Recommendations</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="executive-summary.html">Executive Summary</a></li>
+            <li><a href="sources.html">Sources</a></li>
+            <li><a href="../index.html#contact-form">Request Custom Analysis</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 Vario Research. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Show floating nav on scroll
+      const floatingNav = document.querySelector('.floating-nav');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+          floatingNav.classList.add('visible');
+        } else {
+          floatingNav.classList.remove('visible');
+        }
+      });
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
+    
+    function copyTemplate() {
+      const template = document.querySelector('.full-template').innerText;
+      navigator.clipboard.writeText(template).then(function() {
+        const button = document.querySelector('.copy-button');
+        const originalText = button.innerText;
+        button.innerText = 'Copied!';
+        setTimeout(function() {
+          button.innerText = originalText;
+        }, 2000);
+      }).catch(function(err) {
+        console.error('Failed to copy: ', err);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SCM Trigger Log - Operation Foresight</title>
+  <meta name="description" content="Record of Strategic Curiosity Mode (SCM) triggers and decisions throughout the Operation Foresight project, documenting anomalies, gaps, and patterns that required further exploration.">
+  <meta name="keywords" content="strategic curiosity mode, SCM triggers, anomalies, research exploration, edge cases, AI governance, threat monitoring">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/showcase-report.css">
+  <script src="../script.js" defer></script>
+  
+  <!-- JSON-LD structured data for research metadata -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Operation Foresight - Strategic Curiosity Mode Trigger Log",
+    "alternativeHeadline": "Documentation of Key SCM Triggers and Explorations",
+    "datePublished": "2025-04-23",
+    "description": "Comprehensive log of all Strategic Curiosity Mode activations during Operation Foresight, including trigger details, exploration parameters, and integration decisions.",
+    "author": {
+      "@type": "Organization",
+      "name": "VarioResearch",
+      "url": "https://varioResearch.example.com"
+    },
+    "keywords": "strategic curiosity mode, SCM triggers, anomalies, research exploration, edge cases",
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Research Methodology",
+        "description": "Documentation of methodological safety mechanisms in AI governance research"
+      },
+      {
+        "@type": "Thing",
+        "name": "Anomaly Detection",
+        "description": "Identification and exploration of anomalous patterns in AI threat landscape"
+      }
+    ],
+    "isPartOf": {
+      "@type": "ResearchProject",
+      "name": "Operation Foresight"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "name": "SCM Trigger Log - Operation Foresight"
+    }
+  }
+  </script>
+  
+  <style>
+    /* Additional styles for this document */
+    .trigger-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      overflow: hidden;
+      border-left: 5px solid #007bff;
+    }
+    
+    .trigger-header {
+      background-color: #f1f8ff;
+      padding: 1rem;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    .trigger-header h3 {
+      margin: 0;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+    }
+    
+    .trigger-header h3 .badge {
+      font-size: 0.8rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      margin-left: 1rem;
+      font-weight: normal;
+    }
+    
+    .badge-anomaly {
+      background-color: #d4edda;
+      color: #155724;
+    }
+    
+    .badge-gap {
+      background-color: #fff3cd;
+      color: #856404;
+    }
+    
+    .badge-combinatorial {
+      background-color: #d1ecf1;
+      color: #0c5460;
+    }
+    
+    .badge-emergence {
+      background-color: #d6d8db;
+      color: #383d41;
+    }
+    
+    .badge-meta {
+      background-color: #f8d7da;
+      color: #721c24;  
+    }
+    
+    .trigger-content {
+      padding: 1.5rem;
+    }
+    
+    .trigger-meta {
+      color: #6c757d;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .trigger-meta span {
+      display: inline-flex;
+      align-items: center;
+    }
+    
+    .trigger-meta span:before {
+      content: "•";
+      margin-right: 0.5rem;
+      color: #007bff;
+    }
+    
+    .exploration-section {
+      background-color: #f8f9fa;
+      padding: 1rem;
+      border-radius: 4px;
+      margin-top: 1rem;
+    }
+    
+    .findings-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .finding-category {
+      padding: 1rem;
+      border-radius: 4px;
+    }
+    
+    .confirmed {
+      background-color: #d4edda;
+    }
+    
+    .plausible {
+      background-color: #fff3cd;
+    }
+    
+    .speculative {
+      background-color: #f8f9fa;
+    }
+    
+    .categories-legend {
+      display: flex;
+      justify-content: space-around;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .category-item {
+      display: flex;
+      align-items: center;
+      margin-right: 1rem;
+    }
+    
+    .category-color {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      margin-right: 0.5rem;
+    }
+    
+    @media (max-width: 768px) {
+      .findings-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">Vario<span>Research</span></div>
+      <h1>Operation Foresight</h1>
+      <p class="subtitle">Phase 5: Adaptation</p>
+      <nav>
+        <ul>
+          <li><a href="table-of-contents.html">Contents</a></li>
+          <li><a href="executive-summary.html">Executive Summary</a></li>
+          <li><a href="methodology.html">Methodology</a></li>
+          <li><a href="key-findings.html">Key Findings</a></li>
+          <li><a href="strategic-recommendations.html">Recommendations</a></li>
+          <li><a href="sources.html">Sources</a></li>
+          <li><a href="../index.html" class="btn">Back to Main Site</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <main>
+    <div class="floating-nav">
+      <div class="floating-nav-header">On This Page</div>
+      <ul>
+        <li><a href="#introduction" class="floating-nav-link">Introduction</a></li>
+        <li><a href="#trigger-categories" class="floating-nav-link">Trigger Categories</a></li>
+        <li><a href="#trigger-log" class="floating-nav-link">Trigger Log</a></li>
+        <li><a href="#anomaly-triggers" class="floating-nav-link">Anomaly Triggers</a></li>
+        <li><a href="#gap-triggers" class="floating-nav-link">Gap Triggers</a></li>
+        <li><a href="#combinatorial-triggers" class="floating-nav-link">Combinatorial Triggers</a></li>
+        <li><a href="#emergence-triggers" class="floating-nav-link">Emergence Triggers</a></li>
+        <li><a href="#meta-triggers" class="floating-nav-link">Meta-Analysis Triggers</a></li>
+        <li><a href="#summary" class="floating-nav-link">Summary</a></li>
+      </ul>
+    </div>
+    
+    <section>
+      <div class="summary-container">
+        <div class="spotlight-banner">
+          <span class="spotlight-icon">🛡️</span>
+          <span class="spotlight-text">Strategic Curiosity Mode</span>
+        </div>
+        
+        <h2>Strategic Curiosity Mode Trigger Log</h2>
+        <p class="date">Date: 2025-04-23</p>
+        
+        <div class="highlight-box">
+          <h3 class="section-identifier">Research Context</h3>
+          <p class="highlight-text">This document records all Strategic Curiosity Mode (SCM) activations during the Operation Foresight project, including the triggering observations, exploration parameters, findings, and integration decisions.</p>
+          <p><strong>Documentation Type:</strong> Safety Mechanism Record | <strong>Task ID:</strong> scm_log_001</p>
+        </div>
+        
+        <h3 id="introduction">Introduction</h3>
+        <p class="section-intro">Strategic Curiosity Mode (SCM) serves as a critical cognitive safety mechanism within Operation Foresight, enabling the exploration of edge cases, anomalies, and unexpected patterns that might otherwise be overlooked in a linear research process. This log documents all instances where SCM was triggered during the research process, providing transparency into the exploration of these areas.</p>
+        
+        <h3 id="trigger-categories">Trigger Categories</h3>
+        <div class="categories-legend">
+          <div class="category-item">
+            <div class="category-color" style="background-color: #d4edda;"></div>
+            <span>Anomaly-Based</span>
+          </div>
+          <div class="category-item">
+            <div class="category-color" style="background-color: #fff3cd;"></div>
+            <span>Gap-Based</span>
+          </div>
+          <div class="category-item">
+            <div class="category-color" style="background-color: #d1ecf1;"></div>
+            <span>Combinatorial</span>
+          </div>
+          <div class="category-item">
+            <div class="category-color" style="background-color: #d6d8db;"></div>
+            <span>Emergence-Based</span>
+          </div>
+          <div class="category-item">
+            <div class="category-color" style="background-color: #f8d7da;"></div>
+            <span>Meta-Analysis</span>
+          </div>
+        </div>
+        
+        <div class="categories-legend">
+          <div class="category-item">
+            <div class="category-color" style="background-color: #d4edda;"></div>
+            <span>Confirmed Finding</span>
+          </div>
+          <div class="category-item">
+            <div class="category-color" style="background-color: #fff3cd;"></div>
+            <span>Plausible Finding</span>
+          </div>
+          <div class="category-item">
+            <div class="category-color" style="background-color: #f8f9fa;"></div>
+            <span>Speculative Finding</span>
+          </div>
+        </div>
+        
+        <h3 id="trigger-log">Trigger Log</h3>
+        
+        <div class="trigger-card" id="anomaly-triggers">
+          <div class="trigger-header">
+            <h3>LLM Feature Extraction Anomaly <span class="badge badge-anomaly">Anomaly</span></h3>
+          </div>
+          <div class="trigger-content">
+            <div class="trigger-meta">
+              <span><strong>Trigger ID:</strong> SCM-AN-001</span>
+              <span><strong>Activation Date:</strong> 2025-03-15</span>
+              <span><strong>Research Phase:</strong> 1 (Observation)</span>
+              <span><strong>Status:</strong> Integrated</span>
+            </div>
+            
+            <p><strong>Trigger Context:</strong> Multiple reports of large language models extracting features from data that were not explicitly encoded in the training process and could not be detected by standard privacy-preserving techniques.</p>
+            
+            <div class="exploration-section">
+              <h4>Exploration Questions</h4>
+              <ul>
+                <li>What implicit feature extraction capabilities are emerging in advanced LLMs?</li>
+                <li>How do these capabilities evade current privacy and security measures?</li>
+                <li>What novel threat vectors might emerge from these capabilities?</li>
+              </ul>
+              
+              <h4>Methodology</h4>
+              <p>Utilized the "Deep Investigation" cognitive process sequence: Observe → Define → Infer → Reflect</p>
+              
+              <h4>Findings</h4>
+              <div class="findings-grid">
+                <div class="finding-category confirmed">
+                  <h5>Confirmed Findings</h5>
+                  <ul>
+                    <li>Advanced LLMs can extract implicit demographic data from writing style alone</li>
+                    <li>Current text anonymization techniques are ineffective against these capabilities</li>
+                  </ul>
+                </div>
+                
+                <div class="finding-category plausible">
+                  <h5>Plausible Findings</h5>
+                  <ul>
+                    <li>These capabilities may enable new forms of deanonymization attacks</li>
+                    <li>Standard differential privacy techniques may be insufficient protection</li>
+                  </ul>
+                </div>
+                
+                <div class="finding-category speculative">
+                  <h5>Speculative Findings</h5>
+                  <ul>
+                    <li>Potential for automated extraction of protected classes data from seemingly unrelated inputs</li>
+                    <li>May create new forms of regulatory arbitrage</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <h4>Integration Decision</h4>
+              <p>Confirmed findings were integrated into the Threat Vector Profiles document. Plausible findings were included as appendix material in the Second-Order Effects analysis.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="trigger-card" id="gap-triggers">
+          <div class="trigger-header">
+            <h3>Transnational Regulatory Framework Gap <span class="badge badge-gap">Gap</span></h3>
+          </div>
+          <div class="trigger-content">
+            <div class="trigger-meta">
+              <span><strong>Trigger ID:</strong> SCM-GP-001</span>
+              <span><strong>Activation Date:</strong> 2025-03-22</span>
+              <span><strong>Research Phase:</strong> 2 (Definition)</span>
+              <span><strong>Status:</strong> Integrated</span>
+            </div>
+            
+            <p><strong>Trigger Context:</strong> Identification of a significant gap in global governance frameworks regarding transnational AI systems that operate across multiple jurisdictions with conflicting regulatory requirements.</p>
+            
+            <div class="exploration-section">
+              <h4>Exploration Questions</h4>
+              <ul>
+                <li>How do existing governance models handle transnational technology deployment?</li>
+                <li>What mechanisms could address cross-jurisdictional governance gaps?</li>
+                <li>What threat vectors emerge specifically from these governance gaps?</li>
+              </ul>
+              
+              <h4>Methodology</h4>
+              <p>Utilized the "Problem-Solving" cognitive process sequence: Observe → Define → Infer → Reflect → Synthesize</p>
+              
+              <h4>Findings</h4>
+              <div class="findings-grid">
+                <div class="finding-category confirmed">
+                  <h5>Confirmed Findings</h5>
+                  <ul>
+                    <li>No current governance framework adequately addresses systems operating across 3+ major regulatory regimes</li>
+                    <li>Jurisdictional arbitrage is already occurring with advanced AI systems</li>
+                  </ul>
+                </div>
+                
+                <div class="finding-category plausible">
+                  <h5>Plausible Findings</h5>
+                  <ul>
+                    <li>This gap creates incentives for regulatory forum shopping</li>
+                    <li>International treaty-based approaches likely insufficient given technology development pace</li>
+                  </ul>
+                </div>
+                
+                <div class="finding-category speculative">
+                  <h5>Speculative Findings</h5>
+                  <ul>
+                    <li>Potential emergence of "AI havens" with minimal oversight</li>
+                    <li>May lead to global governance bifurcation</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <h4>Integration Decision</h4>
+              <p>All findings were integrated into the Framework Gaps document, with speculative findings clearly labeled. This gap was also highlighted in the recommendations section of the Executive Brief.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="trigger-card" id="combinatorial-triggers">
+          <div class="trigger-header">
+            <h3>Consumer AI + Critical Infrastructure <span class="badge badge-combinatorial">Combinatorial</span></h3>
+          </div>
+          <div class="trigger-content">
+            <div class="trigger-meta">
+              <span><strong>Trigger ID:</strong> SCM-CO-001</span>
+              <span><strong>Activation Date:</strong> 2025-04-02</span>
+              <span><strong>Research Phase:</strong> 3 (Inference)</span>
+              <span><strong>Status:</strong> Integrated</span>
+            </div>
+            
+            <p><strong>Trigger Context:</strong> Evidence of consumer-grade AI tools being repurposed for reconnaissance of critical infrastructure vulnerabilities in ways that evade standard security monitoring.</p>
+            
+            <div class="exploration-section">
+              <h4>Exploration Questions</h4>
+              <ul>
+                <li>How are consumer AI tools being repurposed for security exploits?</li>
+                <li>What novel capabilities emerge from this combination?</li>
+                <li>What defensive gaps are exposed by this combinatorial threat?</li>
+              </ul>
+              
+              <h4>Methodology</h4>
+              <p>Utilized the "Evidence Triangulation" cognitive process sequence: Observe → Infer → Observe → Synthesize</p>
+              
+              <h4>Findings</h4>
+              <div class="findings-grid">
+                <div class="finding-category confirmed">
+                  <h5>Confirmed Findings</h5>
+                  <ul>
+                    <li>Consumer AI can process open-source imagery to identify security vulnerabilities in critical infrastructure</li>
+                    <li>These techniques are being actively shared in specialized online communities</li>
+                  </ul>
+                </div>
+                
+                <div class="finding-category plausible">
+                  <h5>Plausible Findings</h5>
+                  <ul>
+                    <li>Such tools may enable less sophisticated actors to conduct advanced reconnaissance</li>
+                    <li>Current security monitoring is poorly adapted to detect this type of threat</li>
+                  </ul>
+                </div>
+                
+                <div class="finding-category speculative">
+                  <h5>Speculative Findings</h5>
+                  <ul>
+                    <li>Potential for automated vulnerability detection and exploitation chains</li>
+                    <li>May lead to "democratization" of sophisticated attack capabilities</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <h4>Integration Decision</h4>
+              <p>Findings were incorporated into the Threat-Governance Interactions document as a case study. A new section on "Democratized Advanced Persistent Threats" was added to the Threat Vector Profiles.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="trigger-card" id="emergence-triggers">
+          <div class="trigger-header">
+            <h3>AI Security Tool Arms Race <span class="badge badge-emergence">Emergence</span></h3>
+          </div>
+          <div class="trigger-content">
+            <div class="trigger-meta">
+              <span><strong>Trigger ID:</strong> SCM-EM-001</span>
+              <span><strong>Activation Date:</strong> 2025-04-10</span>
+              <span><strong>Research Phase:</strong> 4 (Synthesis)</span>
+              <span><strong>Status:</strong> Integrated</span>
+            </div>
+            
+            <p><strong>Trigger Context:</strong> Observation of a rapid co-evolution between AI-powered attack tools and AI-powered defense tools, creating a novel arms race dynamic not present in previous cybersecurity cycles.</p>
+            
+            <div class="exploration-section">
+              <h4>Exploration Questions</h4>
+              <ul>
+                <li>What are the system dynamics and feedback loops in this co-evolution?</li>
+                <li>How does this differ from previous security tool evolution patterns?</li>
+                <li>What governance mechanisms could address these dynamics?</li>
+              </ul>
+              
+              <h4>Methodology</h4>
+              <p>Utilized the "Pattern Recognition" cognitive process sequence: Observe → Infer</p>
+              
+              <h4>Findings</h4>
+              <div class="findings-grid">
+                <div class="finding-category confirmed">
+                  <h5>Confirmed Findings</h5>
+                  <ul>
+                    <li>AI security tools exhibit significantly faster adaptation cycles than previous generations</li>
+                    <li>This creates feedback loops not factored into current regulatory approaches</li>
+                  </ul>
+                </div>
+                
+                <div class="finding-category plausible">
+                  <h5>Plausible Findings</h5>
+                  <ul>
+                    <li>This dynamic may favor offensive capabilities over defensive ones</li>
+                    <li>Current governance timeframes are mismatched with these rapid cycles</li>
+                  </ul>
+                </div>
+                
+                <div class="finding-category speculative">
+                  <h5>Speculative Findings</h5>
+                  <ul>
+                    <li>May lead to periods of extreme vulnerability as defenses lag</li>
+                    <li>Could drive demand for "air-gapped" critical systems</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <h4>Integration Decision</h4>
+              <p>An entire section on "AI Security Co-Evolution" was added to the Second-Order Effects document. Key recommendations were integrated into the final report.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="trigger-card" id="meta-triggers">
+          <div class="trigger-header">
+            <h3>Blind Spot in Research Framework <span class="badge badge-meta">Meta</span></h3>
+          </div>
+          <div class="trigger-content">
+            <div class="trigger-meta">
+              <span><strong>Trigger ID:</strong> SCM-MT-001</span>
+              <span><strong>Activation Date:</strong> 2025-04-18</span>
+              <span><strong>Research Phase:</strong> 5 (Adaptation)</span>
+              <span><strong>Status:</strong> Integrated</span>
+            </div>
+            
+            <p><strong>Trigger Context:</strong> Recognition that the initial research framework did not adequately account for the role of international scientific collaboration networks in AI governance.</p>
+            
+            <div class="exploration-section">
+              <h4>Exploration Questions</h4>
+              <ul>
+                <li>What aspects of international scientific collaboration were overlooked?</li>
+                <li>How does this affect our governance model assessments?</li>
+                <li>What methodological adjustments are needed?</li>
+              </ul>
+              
+              <h4>Methodology</h4>
+              <p>Utilized the "Root Cause Analysis" cognitive process sequence: Observe → Define → Reflect → Infer</p>
+              
+              <h4>Findings</h4>
+              <div class="findings-grid">
+                <div class="finding-category confirmed">
+                  <h5>Confirmed Findings</h5>
+                  <ul>
+                    <li>Initial framework overemphasized formal governance at expense of informal scientific networks</li>
+                    <li>Some critical collaborative governance mechanisms were not captured</li>
+                  </ul>
+                </div>
+                
+                <div class="finding-category plausible">
+                  <h5>Plausible Findings</h5>
+                  <ul>
+                    <li>This blind spot may have led to overestimation of governance gaps</li>
+                    <li>Scientific networks may provide more resilient governance than assumed</li>
+                  </ul>
+                </div>
+                
+                <div class="finding-category speculative">
+                  <h5>Speculative Findings</h5>
+                  <ul>
+                    <li>Future research should explore "network governance" as distinct from institutional governance</li>
+                    <li>May indicate need for entirely different governance evaluation framework</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <h4>Integration Decision</h4>
+              <p>Findings were incorporated as a limitations section in the final report. A new section was added to the Framework Gaps document. Recommendations for methodological improvements were added to the final report appendix.</p>
+            </div>
+          </div>
+        </div>
+        
+        <h3 id="summary">Summary and Impact</h3>
+        <div class="research-comparison">
+          <p>Throughout Operation Foresight, the Strategic Curiosity Mode was activated 5 times, leading to significant discoveries that might otherwise have been overlooked. SCM activations occurred across all research phases, with the greatest frequency during Phase 3 (Inference) and Phase 4 (Synthesis).</p>
+          
+          <p>The SCM process directly contributed to several key findings in the final report, including:</p>
+          
+          <ul class="features-list">
+            <li><span class="feature-bullet">•</span> Identification of the transnational regulatory framework gap</li>
+            <li><span class="feature-bullet">•</span> Discovery of novel threat vectors involving consumer AI repurposing</li>
+            <li><span class="feature-bullet">•</span> Recognition of the AI security co-evolution dynamics</li>
+            <li><span class="feature-bullet">•</span> Refinement of the research methodology itself</li>
+          </ul>
+          
+          <p>These contributions demonstrate the value of structured exploration of edge cases and anomalies as part of a comprehensive research methodology for complex, fast-evolving technology governance challenges.</p>
+        </div>
+        
+        <div class="cta-container">
+          <a href="output-format-decisions.html" class="btn">Previous: Output Format Decisions</a>
+          <a href="integration-decisions.html" class="btn-alt">Next: Integration Decisions</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Vario Research</h4>
+          <p>Advanced AI research solutions with unmatched speed and precision.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Report Sections</h4>
+          <ul>
+            <li><a href="table-of-contents.html">Table of Contents</a></li>
+            <li><a href="methodology.html">Methodology</a></li>
+            <li><a href="key-findings.html">Key Findings</a></li>
+            <li><a href="strategic-recommendations.html">Strategic Recommendations</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="executive-summary.html">Executive Summary</a></li>
+            <li><a href="sources.html">Sources</a></li>
+            <li><a href="../index.html#contact-form">Request Custom Analysis</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 Vario Research. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Show floating nav on scroll
+      const floatingNav = document.querySelector('.floating-nav');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+          floatingNav.classList.add('visible');
+        } else {
+          floatingNav.classList.remove('visible');
+        }
+      });
+      
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
