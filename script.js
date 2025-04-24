@@ -14,17 +14,19 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileNavigation();
 });
 
-// Smooth Scrolling Implementation
+// Smooth Scrolling Implementation - modified to exclude form elements
 function initSmoothScrolling() {
-    const navLinks = document.querySelectorAll('a[href^="#"]');
+    // Only select navigation links, not form elements
+    const navLinks = document.querySelectorAll('nav a[href^="#"], .hero-buttons a[href^="#"], .report-cta a[href^="#"], .cta a[href^="#"]');
 
     navLinks.forEach(link => {
         link.addEventListener('click', function(event) {
-            event.preventDefault();
+            // Only prevent default for actual page navigation, not form submission
             const targetId = this.hash;
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
+                event.preventDefault(); // Only prevent default if we found the target
                 window.scrollTo({
                     top: targetElement.offsetTop - 50,
                     behavior: 'smooth'
@@ -37,7 +39,7 @@ function initSmoothScrolling() {
 // Contact Form Handling
 function initContactForm() {
     const contactForm = document.getElementById('varioresearch-form');
-    const formSuccess = document.getElementById('form-success');
+    // Removed duplicate declaration
     const otherResearchField = document.getElementById('otherResearchContainer');
     const researchTypeSelect = document.getElementById('researchType');
     
@@ -48,24 +50,30 @@ function initContactForm() {
         });
     }
 
-    // Form submission
+    // Form submission - simplified to ensure it works properly
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            
             // Basic form validation
             const fullName = document.getElementById('fullName');
             const email = document.getElementById('email');
             const researchBrief = document.getElementById('researchBrief');
             
-            if (fullName.value && email.value && researchBrief.value) {
-                // In a real implementation, this would send data to the server
-                // For demonstration, we're showing the success message
-                contactForm.style.display = 'none';
-                if (formSuccess) formSuccess.style.display = 'block';
-            } else {
+            if (!fullName.value || !email.value || !researchBrief.value) {
+                event.preventDefault();
                 alert('Please fill in all required fields.');
+                return;
             }
+            
+            // Show loading state
+            const submitBtn = contactForm.querySelector('.submit-btn');
+            if (submitBtn) {
+                submitBtn.textContent = 'Submitting...';
+                submitBtn.disabled = true;
+            }
+            
+            // No preventDefault() here - letting form submit naturally to Formspree
+            console.log('Form is valid, submitting to Formspree...');
+            // The form will redirect to thank-you.html after submission
         });
     }
 }
